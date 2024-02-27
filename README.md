@@ -61,5 +61,5 @@ Il codice fornito implementa un server socket in Python utilizzando il modulo so
 ## Conclusione
 Il codice implementa con successo un server socket che consente la comunicazione bidirezionale con un client attraverso una connessione TCP. L'utilizzo di thread separati per la ricezione e l'invio dei messaggi consente al server di gestire più connessioni simultaneamente. 
 
-> **Attenzione!**
+> [!WARNING]
 > Il codice non include gestione degli errori, che potrebbe essere necessaria per garantire una maggiore robustezza e sicurezza dell'applicazione.
