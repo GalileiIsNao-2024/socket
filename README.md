@@ -16,7 +16,7 @@ Il codice fornito implementa un server socket in Python utilizzando il modulo so
     servSock.bind(sADDR)
     servSock.listen(5)
     ```
-    - `sADDR` rappresenta l'indirizzo IP del server e la porta sulla quale il server rimane in ascolto per le connessioni in entrata. Lasciando il valore del indirizzo vuoto i dati del server verrando mandati direttamente al dispositivo richiedente.
+    - `sADDR` rappresenta l'indirizzo IP del server e la porta sulla quale il server rimane in ascolto per le connessioni in entrata. Lasciando il valore dell'indirizzo vuoto i dati del server verranno mandati direttamente al dispositivo richiedente.
     - `buff` definisce la dimensione dei dati
     - `servSock` è il socket del server, viene inizializzato utilizzando `socket.socket()` specificando `AF_INET` per l'indirizzo IP e `SOCK_STREAM` per il tipo di socket TCP.
     - Il server si mette in ascolto su sADDR utilizzando il metodo bind() e listen().
