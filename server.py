@@ -17,7 +17,7 @@ print("...Connection made with {0}".format(cADDR))
 def receive():
     while True:
         rMessage = cliSock.recv(buff)
-        if not rMessage:
+        if rMessage.decode('utf-8') == "exit":
             print("Ending connection")
             break
         print("[{0}]: {1}".format(ctime(), rMessage.decode('utf-8')))
