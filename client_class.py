@@ -48,6 +48,8 @@ def signal_handler(sig, frame):
     client.close()
     sys.exit(0)
 
+signal.signal(signal.SIGINT, signal_handler)
+
 client = Client(('localhost', 45002), 1024)
 
 client.t1.start()

@@ -25,6 +25,9 @@ class Server:
             self.t1.join()
             self.t2.join()
             self.cliSock.close()
+        
+    def run(self):
+        pass
 
     def receive(self):
         while self.isRunning:
