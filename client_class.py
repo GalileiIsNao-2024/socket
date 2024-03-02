@@ -1,5 +1,6 @@
 import socket
 from time import ctime
+import time
 import threading
 import signal
 import sys
@@ -34,8 +35,10 @@ class Client:
     def send(self):
         while self.isRunning:
             try:
-                sMessage = input(">>")
+                #sMessage = input(">>")
+                sMessage = "client message"
                 self.cliSock.send(sMessage.encode('utf-8'))
+                time.sleep(5)
                 if sMessage == "exit":
                     print("Ending send connection")
                     self.stop()

@@ -1,5 +1,6 @@
 import socket
 from time import ctime
+import time
 import threading
 import signal
 import sys
@@ -50,10 +51,12 @@ class Server:
     def send(self):
         while self.isRunning:
             try:
-                sMessage = input(">>")
+                #sMessage = input(">>")
+                sMessage = "server message"
                 if not sMessage:
                     break
                 self.cliSock.send(sMessage.encode('utf-8'))
+                time.sleep(5)
             except Exception as e:
                 print(f"Error: {e}")
                 self.stop()
