@@ -10,18 +10,24 @@ def changeKey(key):
     else:
         global_key = "f"
 
+# Press Down
 keyboard.on_press_key("w", lambda _: changeKey('w'))
 keyboard.on_press_key("a", lambda _: changeKey('a'))
 keyboard.on_press_key("s", lambda _: changeKey('s'))
 keyboard.on_press_key("d", lambda _: changeKey('d'))
-keyboard.on_press_key("f", lambda _: changeKey('f'))
+
+# Press Up
+keyboard.on_release_key("w", lambda _: changeKey('f'))
+keyboard.on_release_key("a", lambda _: changeKey('f'))
+keyboard.on_release_key("s", lambda _: changeKey('f'))
+keyboard.on_release_key("d", lambda _: changeKey('f'))
 
 
 def main():
     global global_key
     old_key = ""
-    host = "192.168.43.138"
-    port = 5557
+    host = "localhost"
+    port = 5555
 
     try:
         client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
